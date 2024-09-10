@@ -5,12 +5,13 @@ import { defaultTheme } from './assets/components/styles/themes/default.ts';
 
 export function App() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-    <Button variant="primary" />
-    <Button variant="secundary" />
-    <Button variant="sucess" />
-    <Button variant="danger"/>
-    <Button />
-    </ThemeProvider>
+    <header>
+      <ThemeProvider theme={defaultTheme}>
+        <Button variant='primary'> Primeira Cor </Button>
+        <Button variant='secundary'> Segunda Cor </Button>
+        <Button variant='sucess'> Sucesso </Button>
+        <Button variant='danger'> Errado </Button>
+      </ThemeProvider>
+    </header>
   )
 }

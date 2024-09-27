@@ -1,7 +1,12 @@
+import App from "../../App";
+
 export function Settings() {
   return (
     <div>
-      <h1>Settings</h1>
+      <App>
+      {/* <h1>Settings</h1> */}
+      </App>
+      
     </div>
   )
 }

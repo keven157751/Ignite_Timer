@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client'
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from './assets/pages/Home.tsx';
-import { App } from './App.tsx';
 import { Settings } from './assets/pages/Settings.tsx';
 import { Login } from './assets/pages/Login/Login.tsx';
 import { Error } from './Error.tsx';
@@ -11,7 +10,7 @@ import { Error } from './Error.tsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />,
+    element: <Home />,
     errorElement: <Error/>
   }, 
   {
@@ -19,8 +18,8 @@ const router = createBrowserRouter([
     element: <Settings />
   },
   {
-    path: "/home",
-    element: <App />
+    path: "/Login",
+    element: <Login />
   }
 ]); 
 

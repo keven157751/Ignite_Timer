@@ -1,18 +1,28 @@
 import { ThemeProvider } from 'styled-components'; 
-import { Button } from './assets/components/Button/button.tsx';
-import { defaultTheme } from './assets/components/styles/themes/default.ts';
-// import { Outlet } from 'react-router-dom';
+import { darkTheme, lightTheme } from './assets/components/styles/themes/default.ts';
+import { GlobalStyles, Wrapper } from './assets/components/styles/GlobalStyle.tsx';
+import { useState } from 'react';
+import { LoginContainer } from './assets/pages/Login/Login.styles.ts';
 
-export function App() {
+const App: React.FC = () => {
+
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
+
   return (
-    <header>
-      <ThemeProvider theme={defaultTheme}>
-        <Button variant='primary'> Primeira Cor </Button>
-        <Button variant='secundary'> Segunda Cor </Button>
-        <Button variant='sucess'> Sucesso </Button>
-        <Button variant='danger'> Errado </Button>
-        {/* <Outlet /> */}
+    <>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <GlobalStyles />
+        <Wrapper>
+        <LoginContainer>
+        </LoginContainer>
+        </Wrapper>
       </ThemeProvider>
-    </header>
+    </>
   )
 }
+
+export default App;

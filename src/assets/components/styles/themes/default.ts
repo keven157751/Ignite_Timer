@@ -1,4 +1,7 @@
-export const defaultTheme = {
-    primary: 'purple',
-    secundary: 'orange'
-}
+export const lightTheme = {
+    backgroundColor: '#333333',
+  };
+  
+export const darkTheme = {
+backgroundColor: '#333333',
+};

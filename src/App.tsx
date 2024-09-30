@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components'; 
 import { darkTheme, lightTheme } from './assets/components/styles/themes/default.ts';
-import { GlobalStyles, Wrapper } from './assets/components/styles/GlobalStyle.tsx';
+import { GlobalStyles } from './assets/components/styles/GlobalStyle.tsx';
 import { useState } from 'react';
 import { LoginContainer } from './assets/pages/Login/Login.styles.ts';
 
@@ -14,12 +14,11 @@ const App: React.FC = () => {
 
   return (
     <>
-    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-      <GlobalStyles />
-        <Wrapper>
-        <LoginContainer>
-        </LoginContainer>
-        </Wrapper>
+      <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+          <LoginContainer>
+            <h1>Login/Cadastro</h1>
+          </LoginContainer>
+        <GlobalStyles />
       </ThemeProvider>
     </>
   )

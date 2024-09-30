@@ -1,18 +1,31 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+
+import { theme } from './themes/theme';
 
 export const GlobalStyles = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: ${(props) => props.theme.backgroundColor};
-    font-family: 'Arial', sans-serif;
+  * {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+    /* /* outline: none; */
   }
-`;
 
-export const Wrapper = styled.div`
-  background-color: ${(props) => props.theme.backgroundColor};
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  html {
+    font-size: ${theme.font.sizes.xxxxsmall};
+  }
+
+  body {
+    background-color: ${theme.colors.background_color_main};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  body, input, textarea, button {
+    font-family: 'Helvetica Neue', sans-serif;;
+  }
+
+  button {
+    cursor: pointer;
+  }
 `;

@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home } from './assets/pages/Home.tsx';
-import { Settings } from './assets/pages/Settings.tsx';
+import { Home } from './assets/pages/Home/Home.tsx';
+import { Settings } from './assets/pages/Settings/Settings.tsx';
 import { Login } from './assets/pages/Login/Login.tsx';
 import { Error } from './Error.tsx';
 

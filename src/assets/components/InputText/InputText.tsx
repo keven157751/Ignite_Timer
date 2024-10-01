@@ -1,5 +1,12 @@
-import { InputContainer } from "./InputText.styles"
+import { InputMain, InputContainer} from "./InputText.styles"
 
 export function Input() {
-    return <InputContainer></InputContainer>
+    return (  
+    <>
+        <InputContainer>
+            <InputMain>
+            </InputMain>
+        </InputContainer>
+    </>
+    )
 }

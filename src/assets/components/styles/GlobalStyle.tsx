@@ -4,10 +4,7 @@ import { theme } from './themes/theme';
 
 export const GlobalStyles = createGlobalStyle`
   * {
-    /* margin: 0;
-    padding: 0; */
     box-sizing: border-box;
-    /* /* outline: none; */
   }
 
   html {
@@ -15,14 +12,17 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${theme.colors.background_color_main};
+    background-color: ${theme.colors.neutral_300};
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  body, input, textarea, button {
-    font-family: 'Helvetica Neue', sans-serif;;
+  body, 
+  input, 
+  textarea, 
+  button {
+    font-family: 'Helvetica Neue', sans-serif;
   }
 
   button {

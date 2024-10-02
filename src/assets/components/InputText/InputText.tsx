@@ -1,6 +1,10 @@
 import { InputMain, InputContainer} from "./InputText.styles"
 
-export function Input() {
+interface InputProps {
+    children?: String;
+}
+
+export function Input({children = ''}:InputProps) {
     return (  
     <>
         <InputContainer>

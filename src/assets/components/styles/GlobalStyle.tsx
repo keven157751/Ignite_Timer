@@ -28,4 +28,8 @@ export const GlobalStyles = createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  button:hover{
+    opacity: 0.8;
+  }
 `;

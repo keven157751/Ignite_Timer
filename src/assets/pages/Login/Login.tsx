@@ -7,8 +7,8 @@ export function Login () {
     <body>
         <LoginContainer>
         <h1>Log in</h1>
-          <Input />
-          <Input />
+        <h3>Email</h3><Input />
+        <h3>Senha</h3><Input />
           <Button variant="sucess" >
             Submit
           </Button>

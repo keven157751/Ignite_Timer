@@ -2,11 +2,9 @@ import App from "../../../App";
 
 export function Settings() {
   return (
-    <div>
-      <App>
-      {/* <h1>Settings</h1> */}
-      </App>
+    <form>
+      <h1>Hola</h1>
       
-    </div>
+    </form>
   )
 }

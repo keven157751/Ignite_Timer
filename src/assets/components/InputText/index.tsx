@@ -32,7 +32,7 @@ export const InputContainer = styled.div`
         top: -12px;
         font-size: 10px;
     }
-`
+`;
 
 export const InputMain = styled.input`
     border: 0;
@@ -44,19 +44,25 @@ export const InputMain = styled.input`
     color: #fff;
 `;
 
+export const ErrorText = styled.span`
+    color: 	#ff3333;
+`;
+
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ label, errorMessage, ...rest }, ref) => {
     return (
         <Divmain>
-         {label || errorMessage ? (
+          {label || errorMessage ? (
           <Divmain2>
             <span>{label}</span>
-            <span>{errorMessage}</span>
+            <ErrorText>
+              {errorMessage}
+            </ErrorText> 
           </Divmain2>
          ) : null}
-         <InputContainer>
-          <InputMain {...rest} ref={ref} />
-         </InputContainer> 
+          <InputContainer>
+            <InputMain {...rest} ref={ref} />
+          </InputContainer> 
         </Divmain>  
     )
   },

@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useNavigate } from "react-router-dom";
+import { GlobalStyles } from "../../components/styles/GlobalStyle";
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Email inválido' }),
@@ -25,34 +26,37 @@ export function Login() {
   })
 
   const onSubmit = handleSubmit((data) => {
-    console.log(data)
-    navigate("/settings")
+    console.log(data);
+    navigate("/");
   })
 
   return (
-    <main>
-      <form onSubmit={onSubmit}>
-        <LoginContainer>
-        <h1>Login</h1>
-        <Input 
-            {...register('email')} 
-            type="text" 
-            label="Email:" 
-            errorMessage={errors.email?.message} 
-            placeholder="teste@email.com"
+    <>
+      <div>
+        <form onSubmit={onSubmit}>
+          <LoginContainer>
+          <h1>Login</h1>
+          <Input 
+              {...register('email')} 
+              type="text" 
+              label="Email:" 
+              errorMessage={errors.email?.message} 
+              placeholder="teste@email.com"
+            />
+          <Input 
+              {...register('password')}
+              type="text"
+              label="Password"
+              errorMessage={errors.password?.message}
+              placeholder="********"
           />
-        <Input 
-            {...register('password')}
-            type="text"
-            label="Password"
-            errorMessage={errors.password?.message}
-            placeholder="********"
-        />
-          <Button variant="sucess" type="submit">
-            Submit
-          </Button>
-        </LoginContainer>
-      </form>
-    </ main>
+            <Button variant="sucess" type="submit">
+              Submit
+            </Button>
+          </LoginContainer>
+        </form>
+      </ div>
+      <GlobalStyles />
+  </>
   )
 }

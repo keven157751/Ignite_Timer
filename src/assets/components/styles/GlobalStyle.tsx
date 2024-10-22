@@ -16,6 +16,7 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
 
   body, 
@@ -23,6 +24,10 @@ export const GlobalStyles = createGlobalStyle`
   textarea, 
   button {
     font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  h1, span {
+    color: white;
   }
 
   button {

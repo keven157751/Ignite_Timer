@@ -1,9 +1,8 @@
-import App from "../../../App";
 
 export function Home() {
   return (
     <div>
-      <App />
+      <h1>Hola</h1>
     </div>
   )
 }

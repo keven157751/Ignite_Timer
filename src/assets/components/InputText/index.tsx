@@ -6,19 +6,19 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   errorMessage?: string
 }
 
-export const Divmain = styled.div`
+const Divmain = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1;
 `;
 
-export const Divmain2 = styled.div`
+const Divmain2 = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
-export const InputContainer = styled.div`
+const InputContainer = styled.div`
 	position: relative;
 	margin-bottom: 25px;
 
@@ -34,7 +34,7 @@ export const InputContainer = styled.div`
     }
 `;
 
-export const InputMain = styled.input`
+const InputMain = styled.input`
     border: 0;
     border-bottom: 1px solid #555;  
     background: transparent;
@@ -44,7 +44,7 @@ export const InputMain = styled.input`
     color: #fff;
 `;
 
-export const ErrorText = styled.span`
+const ErrorText = styled.span`
     color: 	#ff3333;
 `;
 
